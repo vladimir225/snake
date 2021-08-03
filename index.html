@@ -7,12 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="display: flex; justify-content: center;" id="app">
-        <div v-on:keyup.up="changeDirection" class="container">
-            <div class="point" v-bind:class="{ snakePoint: point.snake, eat: point.eat }" v-for="point in points"></div>
-        </div>
-        <div v-if="finish" style="position:absolute; z-index: 10; background-color: red; height: 400px; width: 800px; display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 60px;">Проебали</span>
+    <div id="app">
+        <div style="font-size: 30px;" >{{snake.length}}</div>
+        <div style="display: flex; justify-content: center;" >
+            <div v-on:keyup.up="changeDirection" class="container">
+                <div class="point" v-bind:class="{ snakePoint: point.snake, eat: point.eat, snakeHead: index === snake[0] }" v-for="(point, index) in points"></div>
+            </div>
+            <div v-if="finish" style="position:absolute; z-index: 10; background-color: red; height: 400px; width: 800px; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 60px;">Проебали</span>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
