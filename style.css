@@ -25,3 +25,9 @@
     height: 50px;
     background-color: #9400d3;
 }
+
+.snakeHead {
+    background-image: url('https://icdn.lenta.ru/images/0000/0198/000001986448/pic_1358723717.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

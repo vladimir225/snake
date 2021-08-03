@@ -19,7 +19,7 @@ const app = new Vue({
     }, 
     methods: {
       startGame() {
-        this.points.splice(0, 1, { snake: true })
+        this.points.splice(0, 1, { snake: true, head: true })
       },
       step() {
         this.oldSnake = this.snake;
